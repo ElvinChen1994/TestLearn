@@ -45,10 +45,10 @@ import time
 
 def test_yoyo_01(browser:webdriver.Firefox):
 
-    browser.get("https://www.cnblogs.com/yoyoketang/")
+    browser.get("https://www.cnblogs.com/")
     time.sleep(2)
     t = browser.title
-    assert t == "上海-悠悠"
+    assert t == ""
 
 # test_02.py文件
 
@@ -58,7 +58,12 @@ import time
 
 def test_yoyo_01(browser:webdriver.Firefox):
 
-    browser.get("https://www.cnblogs.com/yoyoketang/")
+    browser.get("https://www.cnblogs.com/")
     time.sleep(2)
     t = browser.title
-    assert "上海-悠悠" in t
+    assert "" in t
+
+'''
+$ pytest —html=report.html —self-contained-html
+$ py.test —rerun 1  —html=report.html —self-contained-html
+'''
