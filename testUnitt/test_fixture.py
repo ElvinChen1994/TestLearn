@@ -54,9 +54,7 @@ conftest.py与运行的用例要在同一个pakage下，并且有init.py文件
 不需要import导入 conftest.py，pytest用例会自动查找
 
 '''
-__init__.py
-
-conftest.py
+#conftest.py
     # coding:utf-8
     import pytest
 
@@ -64,7 +62,7 @@ conftest.py
     def login():
         print("输入账号，密码先登录")
 
-test_fix1.py
+#test_fix1.py
     # coding:utf-8
     import pytest
 
@@ -80,7 +78,7 @@ test_fix1.py
     if __name__ == "__main__":
         pytest.main(["-s", "test_fix1.py"])
 
-test_fix2.py
+#test_fix2.py
     # coding:utf-8
     import pytest
 
